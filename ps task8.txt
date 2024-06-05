@@ -1,0 +1,54 @@
+a = prompt("entera numbers : ").split(" ").map(Number)
+c=0
+b=6
+for( i = 0 ; i < a.length;i++)
+{
+ 
+    for( j=i+1 ;j < a.length; j++)
+    {
+        if(a[i]+a[j] == b)
+        {
+          console.log(a[i],a[j])
+          c++
+        }
+    }
+   
+}
+
+a =  prompt("entera numbers : ").split(" ").map(Number)//[10,10,20,30,20,20]
+e=[]
+for(i=0;i < a.length;i++)
+{
+    if(!e.includes(a[i]))
+    {
+        e.push(a[i])
+    }
+}
+sum = 0
+for(j of e)
+{
+    c=0
+    for( i of a)
+    {
+        if(i == j)
+        {
+            c++
+        }
+    }
+   p = Math.floor(c/2)
+   sum = sum +p 
+}
+console.log("2 pairs detected in the give array ")
+
+
+
+
+
+o/p:
+
+
+entera numbers : 2 4 6 5 1
+2 4
+5 1
+entera numbers : 10 10 20 30 20 20
+2 pairs detected in the given array
